@@ -13,23 +13,23 @@ body{
 
 }
 header {
-    background-color: #0D0D0D;
+    background: rgba(13,13,13,.78);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
-    height: 10vh;
     justify-content: space-evenly;
+    height: 10vh;
+    position: sticky;
     box-shadow:
-    0 5px 12px rgba(0,0,0,.55),
-    0 15px 30px rgba(0,0,0,.35);
-    z-index: 10001;
-    
-}
-.img_header {
-    width: 100px;
-    height: 100%;
-    border: 4px solid rgb(38, 39, 38);
+        0 8px 40px rgba(65, 65, 65, 0.55),
+        0 0 50px rgba(48, 46, 46, 0.25);
     box-sizing: border-box;
-    border-radius: 5px;
+    border: 1px solid rgba(44, 62, 52, 0.542);
+    margin-left: 2%;
+    margin-right: 2%;
+    z-index: 1000;
+    border-radius: 5%;
+    
 }
 .h1_header {
     color: #FFFFFF;
@@ -39,7 +39,7 @@ header {
         0 0 20px rgba(46,204,113,.7),
         0 0 35px rgba(46,204,113,.5);
 }
-.a_header {
+.a2_header , .a_header {
     text-decoration: none;
     background-color: #141414fa;
     padding: 1%;
@@ -54,7 +54,8 @@ header {
     transition: 0.25s;
     color: #FFFFFF;
 }
-.a_header:active {
+.a2_header:active,
+.a_header:active  {
     transform: scale(0.7);
     background-color: #252525fa;
     box-shadow:
@@ -63,7 +64,8 @@ header {
     0 0 18px rgba(0, 160, 80, .28);
     color: #b0b0b0;
 }
-.a_header:hover {
+.a2_header:hover,
+.a_header:hover  {
     transform: scale(1.08);
     background-color: #252525fa;
     box-shadow:
@@ -78,7 +80,7 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 30%;
+    margin-top: 10%;
     border-radius: 20%;
     box-sizing: border-box;
     border: 4px solid rgb(61, 63, 61);
@@ -87,13 +89,8 @@ section {
         0 0 8px #2ECC71,
         0 0 15px rgba(46,204,113,.7),
         0 0 26px rgba(46,204,113,.5);
-}
-.img_section {
-    width: 95%;
-    height: 100%;
-    border-radius: 2px;
-    box-sizing: border-box;
-    border: 4px solid rgb(61, 63, 61);
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .h3_section {
     font-size: 1.3rem;
@@ -105,7 +102,7 @@ section {
         0 0 26px rgba(46,204,113,.5);
         margin-bottom: 1vh;
 }
-.p1_section {
+.p1_section , .p2_section , .p3_section {
     font-size: 0.9rem;
     color: #e4e3e3;
     text-shadow:
@@ -113,6 +110,9 @@ section {
         0 0 8px #2ECC71,
         0 0 15px rgba(46,204,113,.7),
         0 0 26px rgba(46,204,113,.5);
+}
+.ps {
+    margin-top: -1vh;
 }
 footer {
     background-color: #0d0d0db8;
@@ -124,11 +124,14 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 30%;
+    margin-top: 10%;
     height: 100px;
     box-sizing: border-box;
-    border: 4px solid rgb(61, 63, 61);
-    border-radius: 10px;
+    border: 1px solid rgba(44, 62, 52, 0.542);
+    margin-left: 2%;
+    margin-right: 2%;
+    z-index: 1000;
+    border-radius: 5%;
 
 }
 .h4_footer {
@@ -165,5 +168,55 @@ footer {
     30%{ border: 2px solid #7c56d4; box-sizing: border-box; border-radius: 4px; color: #dadada}
     60%{ border: 2px solid #6041a8; box-sizing: border-box; border-radius: 5px; color: #b9b9b9}
     80%{ border: 2px solid #4c3485; box-sizing: border-box; border-radius: 7px; color: #a9a9a9}
-    100%{ border: 2px solid #402878; box-sizing: border-box; border-radius: 8px; color:rgb(117, 117, 117)5}
+    100%{ border: 2px solid #402878; box-sizing: border-box; border-radius: 8px; color:rgb(117, 117, 117)}
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:rgba(15,15,15,.80);
+    color:white;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:
+    0 0 10px rgba(46,204,113,.15);
+}
+
+thead{
+    background:#1b5e20;
+}
+
+th{
+    padding:12px;
+    font-size:15px;
+    border:1px solid #3b3b3b;
+}
+
+td{
+    text-align:center;
+    padding:10px;
+    border:1px solid #2f2f2f;
+    transition:.25s;
+}
+
+tbody tr:nth-child(even){
+    background:#181818;
+}
+
+tbody tr:nth-child(odd){
+    background:#101010;
+}
+
+tbody tr:hover{
+    background:#1d2d1d;
+}
+
+.ok{
+    color:#22C55E;
+    font-weight:bold;
+    text-shadow:0 0 6px rgba(34,197,94,.5);
+}
+
+.no{
+    color:#EF4444;
+    font-weight:bold;
 }
